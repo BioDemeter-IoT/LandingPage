@@ -29,7 +29,7 @@ export function CTASection() {
       <div className="absolute top-10 left-10 opacity-20">
         <motion.div
           animate={{ y: [-10, 10, -10], rotate: [-5, 5, -5] }}
-          transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+          transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" as const }}
         >
           <Leaf className="w-16 h-16 text-white" />
         </motion.div>
@@ -37,7 +37,7 @@ export function CTASection() {
       <div className="absolute bottom-10 right-10 opacity-20">
         <motion.div
           animate={{ y: [10, -10, 10], rotate: [5, -5, 5] }}
-          transition={{ duration: 7, repeat: Infinity, ease: "easeInOut" }}
+          transition={{ duration: 7, repeat: Infinity, ease: "easeInOut" as const }}
         >
           <Sparkles className="w-20 h-20 text-white" />
         </motion.div>
@@ -45,7 +45,7 @@ export function CTASection() {
       <div className="absolute top-1/2 left-1/4 opacity-10">
         <motion.div
           animate={{ scale: [1, 1.2, 1] }}
-          transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+          transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" as const }}
         >
           <div className="w-32 h-32 rounded-full border-4 border-white" />
         </motion.div>

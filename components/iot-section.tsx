@@ -91,14 +91,14 @@ export function IoTSection() {
               <div className="absolute inset-0 flex items-center justify-center">
                 <motion.div
                   animate={{ rotate: 360 }}
-                  transition={{ duration: 60, repeat: Infinity, ease: "linear" }}
+                  transition={{ duration: 60, repeat: Infinity, ease: "linear" as const }}
                   className="w-48 h-48 lg:w-64 lg:h-64 rounded-full border-2 border-dashed border-cyan-500/30"
                 />
               </div>
               <div className="absolute inset-0 flex items-center justify-center">
                 <motion.div
                   animate={{ rotate: -360 }}
-                  transition={{ duration: 45, repeat: Infinity, ease: "linear" }}
+                  transition={{ duration: 45, repeat: Infinity, ease: "linear" as const }}
                   className="w-32 h-32 lg:w-44 lg:h-44 rounded-full border-2 border-dashed border-teal-500/30"
                 />
               </div>
@@ -134,7 +134,7 @@ export function IoTSection() {
                   >
                     <motion.div
                       animate={{ y: [-5, 5, -5] }}
-                      transition={{ duration: 3 + index, repeat: Infinity, ease: "easeInOut" }}
+                      transition={{ duration: 3 + index, repeat: Infinity, ease: "easeInOut" as const }}
                       className="w-full h-full glass rounded-2xl flex items-center justify-center shadow-lg"
                     >
                       <Icon className="w-7 h-7 lg:w-8 lg:h-8 text-cyan-600" />

@@ -22,7 +22,7 @@ function FloatingWidget({
     <motion.div
       initial={{ opacity: 0, y: 20, scale: 0.9 }}
       animate={{ opacity: 1, y: 0, scale: 1 }}
-      transition={{ duration: 0.6, delay, ease: "easeOut" }}
+      transition={{ duration: 0.6, delay, ease: "easeOut" as const }}
       className={`glass rounded-2xl p-4 shadow-xl shadow-primary/5 ${className}`}
     >
       <div className="flex items-center gap-3">
@@ -48,7 +48,7 @@ function FloatingLeaf({ delay, className }: { delay: number; className: string }
     >
       <motion.div
         animate={{ y: [-5, 5, -5], rotate: [-5, 5, -5] }}
-        transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+        transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" as const }}
       >
         <Leaf className="w-8 h-8 text-accent/40" />
       </motion.div>
@@ -99,7 +99,7 @@ export function Hero() {
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.7, ease: "easeOut" }}
+            transition={{ duration: 0.7, ease: "easeOut" as const }}
             className="text-center lg:text-left"
           >
             <motion.div
@@ -184,7 +184,7 @@ export function Hero() {
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.7, delay: 0.3, ease: "easeOut" }}
+            transition={{ duration: 0.7, delay: 0.3, ease: "easeOut" as const }}
             className="relative"
           >
             {/* Main Plant Visual */}
@@ -195,7 +195,7 @@ export function Hero() {
               {/* Plant illustration container */}
               <motion.div
                 animate={{ y: [-10, 10, -10] }}
-                transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
+                transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" as const }}
                 className="relative z-10"
               >
                 <div className="absolute inset-0 flex items-center justify-center">
