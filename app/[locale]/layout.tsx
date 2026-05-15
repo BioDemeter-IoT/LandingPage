@@ -1,7 +1,7 @@
 import { NextIntlClientProvider } from "next-intl"
 import { getMessages, setRequestLocale } from "next-intl/server"
 import { notFound } from "next/navigation"
-import { locales, type Locale } from "@/i18n"
+import { routing } from "@/i18n/routing"
 import type { Metadata } from "next"
 
 type Props = {
@@ -10,7 +10,7 @@ type Props = {
 }
 
 export function generateStaticParams() {
-  return locales.map((locale) => ({ locale }))
+  return routing.locales.map((locale) => ({ locale }))
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
@@ -34,7 +34,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 export default async function LocaleLayout({ children, params }: Props) {
   const { locale } = await params
 
-  if (!locales.includes(locale as Locale)) {
+  if (!routing.locales.includes(locale as "es" | "en")) {
     notFound()
   }
 
@@ -43,7 +43,7 @@ export default async function LocaleLayout({ children, params }: Props) {
   const messages = await getMessages()
 
   return (
-    <html lang={locale} suppressHydrationWarning>
+    <html lang={locale} suppressHydrationWarning className="bg-background">
       <body>
         <NextIntlClientProvider messages={messages}>
           {children}
