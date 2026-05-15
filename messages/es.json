@@ -1,0 +1,372 @@
+{
+  "metadata": {
+    "title": "PlantSync - Cuida tus plantas con tecnología inteligente",
+    "description": "Plataforma web y móvil para el monitoreo asistido, registro y recomendaciones personalizadas para el cuidado de tus plantas."
+  },
+  "nav": {
+    "home": "Inicio",
+    "howItWorks": "Cómo funciona",
+    "benefits": "Beneficios",
+    "iot": "IoT",
+    "ai": "IA Botánica",
+    "pricing": "Planes",
+    "faq": "FAQ",
+    "team": "Equipo",
+    "access": "Acceder"
+  },
+  "hero": {
+    "title": "Tu planta siempre bien cuidada,",
+    "titleHighlight": "sin complicaciones",
+    "subtitle": "Monitorea su estado, recibe notificaciones y accede a guías personalizadas sin ser un experto. PlantSync combina IoT e inteligencia artificial para crear tu invernadero digital.",
+    "cta": "Empieza ahora",
+    "ctaSecondary": "Ver cómo funciona",
+    "widgets": {
+      "humidity": "Humedad",
+      "temperature": "Temperatura",
+      "light": "Luz",
+      "nextTask": "Próxima tarea",
+      "watering": "Riego programado"
+    }
+  },
+  "benefits": {
+    "badge": "Bienestar natural",
+    "title": "Más que cuidar plantas,",
+    "titleHighlight": "cuidas de ti",
+    "subtitle": "Conecta con la naturaleza desde tu hogar y construye rutinas que transforman tu bienestar diario.",
+    "items": {
+      "stress": {
+        "title": "Reduce el estrés",
+        "description": "Las plantas mejoran tu estado de ánimo. Nosotros te ayudamos a cuidarlas sin preocupaciones."
+      },
+      "routine": {
+        "title": "Construye rutinas saludables",
+        "description": "Recordatorios gentiles que se adaptan a tu vida, no al revés."
+      },
+      "connection": {
+        "title": "Siente el acompañamiento",
+        "description": "Tu asistente botánico siempre está disponible para guiarte."
+      },
+      "nature": {
+        "title": "Tecnología que acerca la naturaleza",
+        "description": "IoT e IA al servicio de lo más orgánico: el cuidado de tus plantas."
+      }
+    }
+  },
+  "howItWorks": {
+    "badge": "Simple y poderoso",
+    "title": "Tres pasos hacia tu",
+    "titleHighlight": "jardín inteligente",
+    "steps": {
+      "register": {
+        "number": "01",
+        "title": "Registra tu planta",
+        "description": "Toma una foto o ingresa los datos manualmente. Identificamos la especie y creamos un perfil personalizado."
+      },
+      "connect": {
+        "number": "02",
+        "title": "Conecta y automatiza",
+        "description": "Vincula sensores IoT para monitorear humedad, temperatura y luz en tiempo real. Programa riegos automáticos."
+      },
+      "guide": {
+        "number": "03",
+        "title": "Recibe guía inteligente",
+        "description": "Nuestro asistente con IA analiza datos y clima para darte recomendaciones personalizadas cada día."
+      }
+    }
+  },
+  "features": {
+    "badge": "Todo en un lugar",
+    "title": "Funcionalidades que",
+    "titleHighlight": "transforman el cuidado",
+    "categories": {
+      "profile": {
+        "title": "Perfil y cuenta",
+        "items": ["Registro seguro", "Edición de datos", "Estadísticas personales", "Modo oscuro", "Multi-dispositivo"]
+      },
+      "inventory": {
+        "title": "Inventario botánico",
+        "items": ["Registro de plantas", "Galería de fotos", "Perfil detallado", "Especie y características"]
+      },
+      "monitoring": {
+        "title": "IoT y monitoreo",
+        "items": ["Sensores de humedad", "Temperatura ambiente", "Nivel de luz", "Alertas en tiempo real"]
+      },
+      "tasks": {
+        "title": "Tareas y cuidados",
+        "items": ["Calendario visual", "Recordatorios", "Historial de acciones", "Tareas programadas"]
+      },
+      "ai": {
+        "title": "IA botánica",
+        "items": ["Chat inteligente", "Identificación por foto", "Diagnóstico de problemas", "Consejos expertos"]
+      },
+      "climate": {
+        "title": "Clima y recomendaciones",
+        "items": ["Datos climáticos locales", "Alertas de temperatura", "Sugerencias estacionales", "Análisis predictivo"]
+      }
+    }
+  },
+  "iot": {
+    "badge": "Hardware inteligente",
+    "title": "Tu ecosistema de",
+    "titleHighlight": "monitoreo conectado",
+    "subtitle": "Sensores y actuadores que trabajan juntos para mantener tus plantas en condiciones óptimas, 24/7.",
+    "metrics": {
+      "humidity": {
+        "title": "Humedad del suelo",
+        "description": "Sensores capacitivos que miden con precisión el nivel de agua disponible para las raíces."
+      },
+      "temperature": {
+        "title": "Temperatura ambiente",
+        "description": "Monitoreo constante para detectar cambios que puedan afectar a tus plantas."
+      },
+      "light": {
+        "title": "Intensidad lumínica",
+        "description": "Mide los lux recibidos y ajusta la iluminación artificial si es necesario."
+      },
+      "actuators": {
+        "title": "Actuadores automáticos",
+        "description": "Bomba de agua y lámparas controlables remotamente desde la app."
+      }
+    },
+    "features": {
+      "realtime": "Datos en tiempo real",
+      "alerts": "Alertas inteligentes",
+      "history": "Historial completo",
+      "control": "Control remoto"
+    }
+  },
+  "ai": {
+    "badge": "Inteligencia artificial",
+    "title": "Tu asistente botánico",
+    "titleHighlight": "personal",
+    "subtitle": "Un experto en plantas disponible 24/7 que aprende de tus datos para darte consejos cada vez más precisos.",
+    "features": {
+      "chat": {
+        "title": "Chat inteligente",
+        "description": "Pregunta lo que necesites sobre el cuidado de tus plantas en lenguaje natural."
+      },
+      "recommendations": {
+        "title": "Recomendaciones personalizadas",
+        "description": "Análisis combinado de telemetría IoT, clima local y características de cada especie."
+      },
+      "diagnosis": {
+        "title": "Diagnóstico visual",
+        "description": "Sube una foto y recibe un análisis del estado de salud de tu planta."
+      },
+      "learning": {
+        "title": "Aprendizaje continuo",
+        "description": "El sistema mejora sus recomendaciones basándose en el historial de cada planta."
+      }
+    },
+    "chatExample": {
+      "user": "Mi monstera tiene las hojas amarillas, ¿qué puede ser?",
+      "assistant": "Las hojas amarillas en Monstera pueden indicar exceso de riego. Revisando tus datos de humedad del suelo, veo que está al 85% constantemente. Te recomiendo reducir la frecuencia de riego y asegurar buen drenaje."
+    }
+  },
+  "pricing": {
+    "badge": "Elige tu plan",
+    "title": "Planes para cada",
+    "titleHighlight": "jardinero",
+    "subtitle": "Desde principiantes hasta expertos, tenemos el plan perfecto para ti.",
+    "monthly": "Mensual",
+    "yearly": "Anual",
+    "save": "Ahorra 20%",
+    "plans": {
+      "basic": {
+        "name": "Básico",
+        "price": "$2.99",
+        "period": "/mes",
+        "description": "Perfecto para empezar",
+        "features": [
+          "Registro de hasta 5 plantas",
+          "Recordatorios de cuidado",
+          "Monitoreo manual asistido",
+          "Guías básicas de cuidado"
+        ],
+        "cta": "Comenzar"
+      },
+      "premium": {
+        "name": "Premium",
+        "price": "$10.99",
+        "period": "/mes",
+        "description": "Para entusiastas",
+        "popular": "Más popular",
+        "features": [
+          "Todo lo del plan Básico",
+          "Plantas ilimitadas",
+          "Calendario visual de tareas",
+          "Historial completo de cuidados",
+          "Guías avanzadas"
+        ],
+        "cta": "Elegir Premium"
+      },
+      "pro": {
+        "name": "Pro",
+        "price": "$16.99",
+        "period": "/mes",
+        "description": "Experiencia completa",
+        "features": [
+          "Todo lo del plan Premium",
+          "Integración IoT completa",
+          "Asistente IA ilimitado",
+          "Identificación por foto",
+          "Recomendaciones por clima",
+          "Soporte prioritario"
+        ],
+        "cta": "Ir a Pro"
+      }
+    }
+  },
+  "testimonials": {
+    "badge": "Lo que dicen",
+    "title": "Historias de nuestra",
+    "titleHighlight": "comunidad",
+    "items": [
+      {
+        "quote": "PlantSync salvó mis orquídeas. Nunca supe cuánto regarlas hasta que vi los datos de humedad en tiempo real.",
+        "author": "María García",
+        "role": "Entusiasta de las orquídeas",
+        "plants": "12 plantas"
+      },
+      {
+        "quote": "El asistente IA me ayudó a diagnosticar una plaga antes de que fuera tarde. Mis plantas nunca estuvieron mejor.",
+        "author": "Carlos Mendoza",
+        "role": "Jardinero urbano",
+        "plants": "28 plantas"
+      },
+      {
+        "quote": "Los recordatorios adaptativos son geniales. Ya no olvido regar ni fertilizar, y mis plantas lo agradecen.",
+        "author": "Ana Rodríguez",
+        "role": "Principiante feliz",
+        "plants": "6 plantas"
+      },
+      {
+        "quote": "La automatización del riego cambió todo. Ahora puedo viajar sin preocuparme por mis plantas.",
+        "author": "Luis Torres",
+        "role": "Viajero frecuente",
+        "plants": "15 plantas"
+      }
+    ]
+  },
+  "faq": {
+    "badge": "Preguntas frecuentes",
+    "title": "Resolvemos tus",
+    "titleHighlight": "dudas",
+    "items": [
+      {
+        "question": "¿Necesito sensores IoT para usar PlantSync?",
+        "answer": "No, los sensores son opcionales. Puedes usar PlantSync con monitoreo manual y aún así recibir recordatorios y recomendaciones. Los sensores potencian la experiencia con datos en tiempo real."
+      },
+      {
+        "question": "¿Qué sensores son compatibles?",
+        "answer": "PlantSync es compatible con una amplia gama de sensores de humedad, temperatura y luz. Ofrecemos un kit oficial y también soportamos dispositivos de terceros que usen protocolos estándar."
+      },
+      {
+        "question": "¿La IA funciona sin conexión?",
+        "answer": "El asistente IA requiere conexión a internet para procesar consultas. Sin embargo, los recordatorios y alertas básicas funcionan offline y se sincronizan cuando recuperas conexión."
+      },
+      {
+        "question": "¿Puedo cambiar de plan en cualquier momento?",
+        "answer": "Sí, puedes subir o bajar de plan cuando quieras. Los cambios se aplican al siguiente ciclo de facturación y mantienes acceso a tus datos históricos."
+      },
+      {
+        "question": "¿Mis datos están seguros?",
+        "answer": "Absolutamente. Usamos encriptación de extremo a extremo y cumplimos con regulaciones de privacidad. Tus datos nunca se comparten con terceros sin tu consentimiento."
+      },
+      {
+        "question": "¿Hay app móvil?",
+        "answer": "Sí, PlantSync está disponible como app web progresiva y también como aplicación nativa para iOS y Android, sincronizadas en tiempo real."
+      }
+    ]
+  },
+  "team": {
+    "badge": "Conoce al equipo",
+    "title": "Las mentes detrás de",
+    "titleHighlight": "PlantSync",
+    "subtitle": "Un equipo apasionado por la tecnología y el cuidado del medio ambiente.",
+    "members": [
+      {
+        "name": "Diego Rolin Acuña Tomas",
+        "role": "Full Stack Developer",
+        "skills": "Frontend, Backend, Bases de datos, Open Source"
+      },
+      {
+        "name": "Farid Sebastian Briceño De La Cruz",
+        "role": "Product Developer",
+        "skills": "Frontend, Backend, Bases de datos, Productos digitales"
+      },
+      {
+        "name": "Carlos Andrés Coca Lavado",
+        "role": "Web Developer",
+        "skills": "C++, Python, HTML, Desarrollo web"
+      },
+      {
+        "name": "Erick Leonardo Palomino Fiestas",
+        "role": "Software Developer",
+        "skills": "C++, HTML, CSS, .NET, Python, JavaScript, SQL, MongoDB"
+      },
+      {
+        "name": "Renzo Sebastian Rivera Ratachi",
+        "role": "Frontend Developer",
+        "skills": "JavaScript, C++, Desarrollo de interfaces"
+      },
+      {
+        "name": "Elvia Marcela Rodríguez Villa",
+        "role": "AI/ML Engineer",
+        "skills": "Python, AWS, Data Engineering, Chatbots, Speech Analytics"
+      },
+      {
+        "name": "Max Anthony Paitan Pumacahua",
+        "role": "Business Analyst",
+        "skills": "Análisis, Empatía, Gestión, Colaboración"
+      }
+    ]
+  },
+  "cta": {
+    "title": "Empieza a cuidar tus plantas",
+    "titleHighlight": "con inteligencia",
+    "subtitle": "Únete a miles de personas que ya transformaron su relación con las plantas.",
+    "primary": "Empieza ahora gratis",
+    "secondary": "Descargar app",
+    "tertiary": "Ver demo"
+  },
+  "footer": {
+    "description": "PlantSync es una plataforma de BioPafi para el cuidado inteligente de plantas, combinando IoT e inteligencia artificial.",
+    "product": {
+      "title": "Producto",
+      "features": "Funcionalidades",
+      "pricing": "Planes",
+      "integrations": "Integraciones",
+      "changelog": "Novedades"
+    },
+    "company": {
+      "title": "Compañía",
+      "about": "Sobre nosotros",
+      "team": "Equipo",
+      "careers": "Carreras",
+      "contact": "Contacto"
+    },
+    "resources": {
+      "title": "Recursos",
+      "docs": "Documentación",
+      "guides": "Guías",
+      "support": "Soporte",
+      "api": "API"
+    },
+    "legal": {
+      "title": "Legal",
+      "privacy": "Privacidad",
+      "terms": "Términos",
+      "cookies": "Cookies"
+    },
+    "social": {
+      "twitter": "Twitter",
+      "instagram": "Instagram",
+      "github": "GitHub",
+      "discord": "Discord"
+    },
+    "copyright": "© 2025 BioPafi. Todos los derechos reservados.",
+    "madeWith": "Hecho con",
+    "forPlants": "para las plantas"
+  }
+}
