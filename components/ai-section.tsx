@@ -199,7 +199,7 @@ export function AISection() {
             {/* Floating decorative elements */}
             <motion.div
               animate={{ y: [-5, 5, -5] }}
-              transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+              transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" as const }}
               className="absolute -top-4 -right-4 w-16 h-16 rounded-2xl bg-gradient-to-br from-violet-500/20 to-purple-500/20 backdrop-blur-sm border border-violet-500/20 flex items-center justify-center"
             >
               <Sparkles className="w-8 h-8 text-violet-500" />
