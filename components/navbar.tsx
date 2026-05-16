@@ -119,7 +119,7 @@ export function Navbar() {
               asChild
               className="hidden sm:flex bg-primary hover:bg-primary/90 text-primary-foreground shadow-lg shadow-primary/20 hover:shadow-primary/30 transition-all"
             >
-              <a href="#" className="gap-2">
+              <a href="https://bio-demeter-plant-sync-frontend.vercel.app/login" className="gap-2">
                 {t("access")}
               </a>
             </Button>
