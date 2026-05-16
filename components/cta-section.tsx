@@ -83,7 +83,7 @@ export function CTASection() {
               asChild
               className="bg-white text-primary hover:bg-white/90 shadow-xl text-base px-8 py-6"
             >
-              <a href="#" className="gap-2">
+              <a href="https://bio-demeter-plant-sync-frontend.vercel.app/login" className="gap-2">
                 {t("primary")}
                 <ArrowRight className="w-4 h-4" />
               </a>
@@ -94,7 +94,7 @@ export function CTASection() {
               asChild
               className="border-2 border-white/30 bg-white/10 text-white hover:bg-white/20 text-base px-8 py-6 gap-2"
             >
-              <a href="#">
+              <a href="https://bio-demeter-plant-sync-frontend.vercel.app/login">
                 <Download className="w-4 h-4" />
                 {t("secondary")}
               </a>
@@ -105,7 +105,7 @@ export function CTASection() {
               asChild
               className="text-white hover:bg-white/10 text-base px-8 py-6 gap-2"
             >
-              <a href="#">
+              <a href="https://bio-demeter-plant-sync-frontend.vercel.app/login">
                 <Monitor className="w-4 h-4" />
                 {t("tertiary")}
               </a>
