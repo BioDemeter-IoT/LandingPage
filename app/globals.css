@@ -248,6 +248,25 @@
   .animate-pulse-soft {
     animation: none;
   }
+}
+
+/* Hide v0 watermark badge */
+[data-v0-watermark],
+.v0-watermark,
+button[aria-label*="Built with"],
+a[href*="v0.app"],
+div[class*="powered"],
+span:has-text("Built with v0") {
+  display: none !important;
+}
+
+/* Alternative selectors for v0 badge */
+iframe[src*="v0"],
+.v0-badge,
+.vercel-watermark {
+  display: none !important;
+}
+  }
   
   html {
     scroll-behavior: auto;
