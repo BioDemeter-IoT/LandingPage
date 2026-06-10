@@ -2,107 +2,102 @@
 
 import { useTranslations } from "next-intl"
 import { motion } from "framer-motion"
-import { ArrowRight, Play, Droplets, Thermometer, Sun, Calendar, Leaf } from "lucide-react"
+import { ArrowRight, Play } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { useState, useEffect } from "react"
-
-function FloatingWidget({
-  icon: Icon,
-  label,
-  value,
-  delay,
-  className,
-}: {
-  icon: React.ElementType
-  label: string
-  value: string
-  delay: number
-  className?: string
-}) {
-  return (
-    <motion.div
-      initial={{ opacity: 0, y: 20, scale: 0.9 }}
-      animate={{ opacity: 1, y: 0, scale: 1 }}
-      transition={{ duration: 0.6, delay, ease: "easeOut" as const }}
-      className={`glass rounded-2xl p-4 shadow-xl shadow-primary/5 ${className}`}
-    >
-      <div className="flex items-center gap-3">
-        <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-accent/20 to-highlight/20 flex items-center justify-center">
-          <Icon className="w-5 h-5 text-accent" />
-        </div>
-        <div>
-          <p className="text-xs text-muted-foreground">{label}</p>
-          <p className="text-sm font-semibold text-foreground">{value}</p>
-        </div>
-      </div>
-    </motion.div>
-  )
-}
-
-function FloatingLeaf({ delay, className }: { delay: number; className: string }) {
-  return (
-    <motion.div
-      initial={{ opacity: 0, scale: 0 }}
-      animate={{ opacity: 0.6, scale: 1 }}
-      transition={{ duration: 0.8, delay }}
-      className={`absolute ${className}`}
-    >
-      <motion.div
-        animate={{ y: [-5, 5, -5], rotate: [-5, 5, -5] }}
-        transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" as const }}
-      >
-        <Leaf className="w-8 h-8 text-accent/40" />
-      </motion.div>
-    </motion.div>
-  )
-}
-
-function DataParticle({ delay, className }: { delay: number; className: string }) {
-  const [mounted, setMounted] = useState(false)
-
-  useEffect(() => {
-    setMounted(true)
-  }, [])
-
-  if (!mounted) return null
-
-  return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: [0.3, 0.7, 0.3] }}
-      transition={{ duration: 3, delay, repeat: Infinity }}
-      className={`absolute w-2 h-2 rounded-full bg-highlight ${className}`}
-    />
-  )
-}
 
 export function Hero() {
   const t = useTranslations("hero")
 
   return (
-    <section className="relative min-h-screen overflow-hidden gradient-organic pt-20">
+    <section className="relative w-full py-20 lg:py-32 overflow-hidden bg-gradient-to-b from-background via-background to-muted/20">
       {/* Background decorations */}
-      <div className="absolute inset-0 overflow-hidden">
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
         {/* Gradient orbs */}
         <div className="absolute top-20 left-10 w-96 h-96 bg-accent/10 rounded-full blur-3xl" />
         <div className="absolute bottom-20 right-10 w-80 h-80 bg-highlight/10 rounded-full blur-3xl" />
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-primary/5 rounded-full blur-3xl" />
-        
-        {/* Floating leaves - left side */}
-        <div className="absolute top-32 left-5 opacity-60 pointer-events-none">
-          <Leaf className="w-12 h-12 text-accent/50" />
-        </div>
-        <div className="absolute top-96 left-10 opacity-50 pointer-events-none">
-          <Leaf className="w-10 h-10 text-primary/40" />
-        </div>
-        
-        {/* Floating leaves - right side */}
-        <div className="absolute top-48 right-8 opacity-60 pointer-events-none">
-          <Leaf className="w-14 h-14 text-accent/50" />
-        </div>
-        <div className="absolute top-2/3 right-12 opacity-50 pointer-events-none">
-          <Leaf className="w-10 h-10 text-primary/40" />
-        </div>
+
+        {/* Realistic leaves - left side */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.5, duration: 0.8 }}
+          className="absolute top-20 left-5 w-40 h-40 opacity-70 pointer-events-none"
+        >
+          <img
+            src="/leaf-realistic-1.png"
+            alt=""
+            className="w-full h-full object-contain drop-shadow-lg"
+          />
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.7, duration: 0.8 }}
+          className="absolute top-1/3 left-0 w-32 h-32 opacity-60 pointer-events-none -translate-x-8"
+        >
+          <img
+            src="/leaf-realistic-2.png"
+            alt=""
+            className="w-full h-full object-contain drop-shadow-lg"
+          />
+        </motion.div>
+
+        {/* Realistic leaves - right side */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.6, duration: 0.8 }}
+          className="absolute top-32 right-5 w-44 h-44 opacity-75 pointer-events-none"
+        >
+          <img
+            src="/leaf-realistic-3.png"
+            alt=""
+            className="w-full h-full object-contain drop-shadow-lg"
+          />
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.8, duration: 0.8 }}
+          className="absolute top-2/3 right-10 w-36 h-36 opacity-65 pointer-events-none"
+        >
+          <img
+            src="/leaf-realistic-1.png"
+            alt=""
+            className="w-full h-full object-contain drop-shadow-lg scale-x-[-1]"
+          />
+        </motion.div>
+
+        {/* Bottom leaves */}
+        <motion.div
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.9, duration: 0.8 }}
+          className="absolute bottom-20 left-20 w-40 h-40 opacity-60 pointer-events-none"
+        >
+          <img
+            src="/leaf-realistic-2.png"
+            alt=""
+            className="w-full h-full object-contain drop-shadow-lg scale-x-[-1]"
+          />
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 1, duration: 0.8 }}
+          className="absolute bottom-32 right-32 w-48 h-48 opacity-70 pointer-events-none"
+        >
+          <img
+            src="/leaf-realistic-3.png"
+            alt=""
+            className="w-full h-full object-contain drop-shadow-lg"
+          />
+        </motion.div>
       </div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
@@ -192,143 +187,58 @@ export function Hero() {
             </motion.div>
           </motion.div>
 
-          {/* Right Column - Visual */}
+          {/* Right Column - Device Mockups */}
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.7, delay: 0.3, ease: "easeOut" as const }}
-            className="relative"
+            className="relative h-[500px] lg:h-[600px]"
           >
-            {/* Main Plant Visual */}
-            <div className="relative aspect-square max-w-lg mx-auto">
-              {/* Central glow */}
-              <div className="absolute inset-0 bg-gradient-to-br from-accent/20 via-primary/10 to-highlight/20 rounded-full blur-2xl" />
-              
-              {/* Plant illustration container */}
-              <motion.div
-                animate={{ y: [-10, 10, -10] }}
-                transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" as const }}
-                className="relative z-10"
-              >
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="w-64 h-64 lg:w-80 lg:h-80 rounded-full bg-gradient-to-br from-secondary via-muted to-secondary border-4 border-border/50 shadow-2xl flex items-center justify-center">
-                    <div className="text-center">
-                      <Leaf className="w-24 h-24 lg:w-32 lg:h-32 text-accent mx-auto" />
-                      <p className="mt-4 text-lg font-semibold text-foreground">Monstera</p>
-                      <p className="text-sm text-muted-foreground">Healthy</p>
-                    </div>
+            {/* Laptop - Base */}
+            <motion.div
+              initial={{ opacity: 0, x: -50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, delay: 0.5 }}
+              className="absolute left-1/2 -translate-x-1/2 w-full max-w-2xl h-full flex items-center"
+            >
+              <div className="w-full">
+                <div className="bg-slate-900 rounded-2xl shadow-2xl overflow-hidden border-8 border-slate-800">
+                  <div className="bg-slate-700 h-2" />
+                  <div className="relative bg-white aspect-video">
+                    <img
+                      src="/mockup-web-screen.png"
+                      alt="Web Dashboard"
+                      className="w-full h-full object-cover"
+                    />
                   </div>
+                  <div className="bg-gradient-to-r from-slate-800 to-slate-900 h-6" />
                 </div>
-              </motion.div>
-
-              {/* Floating Widgets */}
-              <div className="absolute top-0 left-0 -translate-x-4 animate-float">
-                <FloatingWidget
-                  icon={Droplets}
-                  label={t("widgets.humidity")}
-                  value="65%"
-                  delay={0.8}
-                />
               </div>
+            </motion.div>
 
-              <div className="absolute top-1/4 right-0 translate-x-4 animate-float-slow">
-                <FloatingWidget
-                  icon={Thermometer}
-                  label={t("widgets.temperature")}
-                  value="22°C"
-                  delay={1.0}
-                />
+            {/* iPhone - Overlaid */}
+            <motion.div
+              initial={{ opacity: 0, x: 50, y: 50 }}
+              animate={{ opacity: 1, x: 0, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.7 }}
+              className="absolute right-0 bottom-0 lg:right-32 lg:bottom-16 w-[160px] lg:w-[240px] z-20"
+            >
+              <div className="bg-black rounded-3xl shadow-2xl overflow-hidden border-8 border-black">
+                <div className="absolute top-0 left-1/2 -translate-x-1/2 w-40 h-7 bg-black rounded-b-3xl z-50" />
+                <div className="relative bg-white aspect-[9/19.5]">
+                  <img
+                    src="/mockup-app-screen.png"
+                    alt="Mobile App"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <div className="flex justify-center pb-2 bg-black">
+                  <div className="w-32 h-1 bg-gray-800 rounded-full" />
+                </div>
               </div>
-
-              <div className="absolute bottom-1/4 left-0 -translate-x-8 animate-float-fast">
-                <FloatingWidget
-                  icon={Sun}
-                  label={t("widgets.light")}
-                  value="750 lux"
-                  delay={1.2}
-                />
-              </div>
-
-              <div className="absolute bottom-0 right-0 translate-x-4 animate-float">
-                <FloatingWidget
-                  icon={Calendar}
-                  label={t("widgets.nextTask")}
-                  value={t("widgets.watering")}
-                  delay={1.4}
-                />
-              </div>
-
-              {/* Connection lines (SVG) */}
-              <svg
-                className="absolute inset-0 w-full h-full pointer-events-none"
-                viewBox="0 0 400 400"
-              >
-                <motion.path
-                  d="M 80 80 Q 150 120 200 200"
-                  fill="none"
-                  stroke="url(#gradient1)"
-                  strokeWidth="2"
-                  strokeDasharray="5 5"
-                  initial={{ pathLength: 0, opacity: 0 }}
-                  animate={{ pathLength: 1, opacity: 0.5 }}
-                  transition={{ duration: 2, delay: 1.5 }}
-                />
-                <motion.path
-                  d="M 320 100 Q 280 150 200 200"
-                  fill="none"
-                  stroke="url(#gradient1)"
-                  strokeWidth="2"
-                  strokeDasharray="5 5"
-                  initial={{ pathLength: 0, opacity: 0 }}
-                  animate={{ pathLength: 1, opacity: 0.5 }}
-                  transition={{ duration: 2, delay: 1.7 }}
-                />
-                <motion.path
-                  d="M 60 280 Q 130 250 200 200"
-                  fill="none"
-                  stroke="url(#gradient1)"
-                  strokeWidth="2"
-                  strokeDasharray="5 5"
-                  initial={{ pathLength: 0, opacity: 0 }}
-                  animate={{ pathLength: 1, opacity: 0.5 }}
-                  transition={{ duration: 2, delay: 1.9 }}
-                />
-                <motion.path
-                  d="M 340 300 Q 280 260 200 200"
-                  fill="none"
-                  stroke="url(#gradient1)"
-                  strokeWidth="2"
-                  strokeDasharray="5 5"
-                  initial={{ pathLength: 0, opacity: 0 }}
-                  animate={{ pathLength: 1, opacity: 0.5 }}
-                  transition={{ duration: 2, delay: 2.1 }}
-                />
-                <defs>
-                  <linearGradient id="gradient1" x1="0%" y1="0%" x2="100%" y2="100%">
-                    <stop offset="0%" stopColor="var(--accent)" />
-                    <stop offset="100%" stopColor="var(--highlight)" />
-                  </linearGradient>
-                </defs>
-              </svg>
-            </div>
+            </motion.div>
           </motion.div>
         </div>
-      </div>
-
-      {/* Bottom wave separator */}
-      <div className="absolute bottom-0 left-0 right-0">
-        <svg
-          viewBox="0 0 1440 120"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-          className="w-full h-auto"
-          preserveAspectRatio="none"
-        >
-          <path
-            d="M0 120L60 110C120 100 240 80 360 70C480 60 600 60 720 65C840 70 960 80 1080 85C1200 90 1320 90 1380 90L1440 90V120H1380C1320 120 1200 120 1080 120C960 120 840 120 720 120C600 120 480 120 360 120C240 120 120 120 60 120H0Z"
-            fill="var(--background)"
-          />
-        </svg>
       </div>
     </section>
   )
