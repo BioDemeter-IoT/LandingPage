@@ -368,5 +368,18 @@
     "copyright": "© 2025 BioPafi. Todos los derechos reservados.",
     "madeWith": "Hecho con",
     "forPlants": "para las plantas"
+  },
+  "sections": {
+    "mockups": {
+      "title": "Explora PlantSync",
+      "subtitle": "Interfaz intuitiva diseñada para que cuidar tus plantas sea una experiencia agradable en cualquier dispositivo.",
+      "mobile": "Aplicación móvil",
+      "dashboard": "Panel web",
+      "tablet": "Versión tablet",
+      "responsive": "Completamente responsivo",
+      "intuitive": "Interfaz intuitiva",
+      "botanical": "Diseño botánico",
+      "realtime": "Datos en tiempo real"
+    }
   }
 }
