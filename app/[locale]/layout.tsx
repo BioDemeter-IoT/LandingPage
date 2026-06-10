@@ -2,6 +2,7 @@ import { NextIntlClientProvider } from "next-intl"
 import { getMessages, setRequestLocale } from "next-intl/server"
 import { notFound } from "next/navigation"
 import { routing } from "@/i18n/routing"
+import { BotanicalFrameLayout } from "@/components/botanical-frame-layout"
 import type { Metadata } from "next"
 
 type Props = {
@@ -45,6 +46,7 @@ export default async function LocaleLayout({ children, params }: Props) {
   return (
     <html lang={locale} suppressHydrationWarning className="bg-background">
       <body>
+        <BotanicalFrameLayout />
         <NextIntlClientProvider messages={messages}>
           {children}
         </NextIntlClientProvider>

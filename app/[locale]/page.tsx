@@ -25,19 +25,21 @@ export default async function HomePage({ params }: Props) {
   return (
     <main className="min-h-screen relative">
       <Navbar />
-      <Hero />
-      <BenefitsSection />
-      <HowItWorksSection />
-      <FeaturesSection />
-      <MockupsSection />
-      <IoTSection />
-      <AISection />
-      <PricingSection />
-      <TestimonialsSection />
-      <FAQSection />
-      <TeamSection />
-      <CTASection />
-      <Footer />
+      <div className="relative z-10">
+        <Hero />
+        <BenefitsSection />
+        <HowItWorksSection />
+        <FeaturesSection />
+        <MockupsSection />
+        <IoTSection />
+        <AISection />
+        <PricingSection />
+        <TestimonialsSection />
+        <FAQSection />
+        <TeamSection />
+        <CTASection />
+        <Footer />
+      </div>
     </main>
   )
 }
