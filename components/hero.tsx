@@ -4,6 +4,7 @@ import { useTranslations } from "next-intl"
 import { motion } from "framer-motion"
 import { ArrowRight, Play, Droplets, Thermometer, Sun, Calendar, Leaf } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import { useState, useEffect } from "react"
 
 function FloatingWidget({
   icon: Icon,
@@ -57,6 +58,14 @@ function FloatingLeaf({ delay, className }: { delay: number; className: string }
 }
 
 function DataParticle({ delay, className }: { delay: number; className: string }) {
+  const [mounted, setMounted] = useState(false)
+
+  useEffect(() => {
+    setMounted(true)
+  }, [])
+
+  if (!mounted) return null
+
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -79,18 +88,21 @@ export function Hero() {
         <div className="absolute bottom-20 right-10 w-80 h-80 bg-highlight/10 rounded-full blur-3xl" />
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-primary/5 rounded-full blur-3xl" />
         
-        {/* Floating leaves */}
-        <FloatingLeaf delay={0.5} className="top-32 left-[15%]" />
-        <FloatingLeaf delay={0.8} className="top-48 right-[20%]" />
-        <FloatingLeaf delay={1.1} className="bottom-40 left-[25%]" />
-        <FloatingLeaf delay={1.4} className="bottom-32 right-[15%]" />
+        {/* Floating leaves - left side */}
+        <div className="absolute top-32 left-5 opacity-60 pointer-events-none">
+          <Leaf className="w-12 h-12 text-accent/50" />
+        </div>
+        <div className="absolute top-96 left-10 opacity-50 pointer-events-none">
+          <Leaf className="w-10 h-10 text-primary/40" />
+        </div>
         
-        {/* Data particles */}
-        <DataParticle delay={0} className="top-40 left-[30%]" />
-        <DataParticle delay={0.5} className="top-60 right-[35%]" />
-        <DataParticle delay={1} className="bottom-48 left-[40%]" />
-        <DataParticle delay={1.5} className="bottom-60 right-[30%]" />
-        <DataParticle delay={2} className="top-1/2 left-[20%]" />
+        {/* Floating leaves - right side */}
+        <div className="absolute top-48 right-8 opacity-60 pointer-events-none">
+          <Leaf className="w-14 h-14 text-accent/50" />
+        </div>
+        <div className="absolute top-2/3 right-12 opacity-50 pointer-events-none">
+          <Leaf className="w-10 h-10 text-primary/40" />
+        </div>
       </div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24">

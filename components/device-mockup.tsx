@@ -42,7 +42,6 @@ export function DeviceMockup({ image, device, alt }: DeviceMockupProps) {
                 alt={alt}
                 fill
                 className="object-cover"
-                quality={95}
               />
             </div>
           </div>
@@ -71,7 +70,6 @@ export function DeviceMockup({ image, device, alt }: DeviceMockupProps) {
                 alt={alt}
                 fill
                 className="object-cover"
-                quality={95}
               />
             </div>
 
@@ -104,7 +102,6 @@ export function DeviceMockup({ image, device, alt }: DeviceMockupProps) {
                 alt={alt}
                 fill
                 className="object-cover"
-                quality={95}
               />
             </div>
           </div>

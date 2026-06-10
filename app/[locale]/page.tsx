@@ -13,7 +13,6 @@ import { FAQSection } from "@/components/faq-section"
 import { TeamSection } from "@/components/team-section"
 import { CTASection } from "@/components/cta-section"
 import { Footer } from "@/components/footer"
-import { BotanicalBorders } from "@/components/botanical-borders"
 
 type Props = {
   params: Promise<{ locale: string }>
@@ -25,23 +24,20 @@ export default async function HomePage({ params }: Props) {
 
   return (
     <main className="min-h-screen relative">
-      <BotanicalBorders />
-      <div className="relative z-10">
-        <Navbar />
-        <Hero />
-        <BenefitsSection />
-        <HowItWorksSection />
-        <FeaturesSection />
-        <MockupsSection />
-        <IoTSection />
-        <AISection />
-        <PricingSection />
-        <TestimonialsSection />
-        <FAQSection />
-        <TeamSection />
-        <CTASection />
-        <Footer />
-      </div>
+      <Navbar />
+      <Hero />
+      <BenefitsSection />
+      <HowItWorksSection />
+      <FeaturesSection />
+      <MockupsSection />
+      <IoTSection />
+      <AISection />
+      <PricingSection />
+      <TestimonialsSection />
+      <FAQSection />
+      <TeamSection />
+      <CTASection />
+      <Footer />
     </main>
   )
 }
