@@ -1,8 +1,15 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import { useEffect, useState } from 'react'
 
 export function BotanicalBorders() {
+  const [mounted, setMounted] = useState(false)
+
+  useEffect(() => {
+    setMounted(true)
+  }, [])
+
   const leafVariants = {
     float: (i: number) => ({
       y: [0, -20, 0],
@@ -33,6 +40,10 @@ export function BotanicalBorders() {
     { id: 11, x: '92%', y: '90%', size: 33, rotate: -35, delay: 0.8 },
     { id: 12, x: '80%', y: '85%', size: 37, rotate: 20, delay: 1.3 },
   ]
+
+  if (!mounted) {
+    return null
+  }
 
   return (
     <>
